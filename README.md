@@ -1,10 +1,10 @@
-# python-AI-toolkit
+# python-IFC-toolkit
 
 EDITOR: Jupyter-Notebook. 
-SNAP based on the notorious: https://github.com/albrecht-j/jupyter-aj
+SNAP based on: https://github.com/mauringo/python-ai-toolkit
 
-The idea is to create an app/snap that contains all the standard packages needed to learn python
-AI and data analysis. All driven by a jupyter web interface. 
+The idea is to create an app/snap that contains all the standard packages needed to experiment with IfcOpenShell. 
+All driven by a jupyter web interface. 
 
 have fun
 
@@ -12,7 +12,7 @@ have fun
 ```snapcraft```
 
 ## Install
-```snap install python-ai-toolkit```
+```snap install python-ifc-toolkit```
 
 ## License
 The snapcraft build declarations including build scripts and cofigurations are under MIT License
@@ -24,4 +24,4 @@ The python package can be found using ```pip install jupyter``` or
 ## Maintainers
 
 
-Mauro Riboni
+Johannes Guntert
