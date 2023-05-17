@@ -1,7 +1,7 @@
-name: python-ai-toolkit
-version: 0.1.5.4
-summary: Python AI starter kit
-description: 'Simple Webbased Editor'
+name: python-ifc-toolkit
+version: 0.1.0.0
+summary: Python IFC playground
+description: 'Jupyter environment for testing'
 
 base: core20
 confinement: strict
@@ -21,7 +21,6 @@ apps:
       - network-bind
       - network-status
       - network-observe
-      - serial-port
       - datalayer
     environment:
        "LD_LIBRARY_PATH": "$LD_LIBRARY_PATH:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/lapack:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/blas:$SNAP/usr/lib/python3/dist-packages"
@@ -76,7 +75,6 @@ parts:
       - pymongo
       - gitpython
       - appdirs
-      - influxdb
       - imutils 
       - werkzeug
       - bokeh
@@ -87,11 +85,7 @@ parts:
       - numpy
       - six
       - autopep8
-      - ctrlx_fbs
-      - ctrlx_datalayer
       - python-socketio[client]
-      - scikit-learn
-      - scipy
       - opencv-python
       - schedule 
       - pandas
@@ -99,9 +93,10 @@ parts:
       - typer
       - tsfresh
       - pydantic
-      - azure-iot-device
-      - colorama
       - asyncua
+      - ifcopenshell
+      - sqlite
+      
 
     build-packages:
       - python3-dev
@@ -110,18 +105,7 @@ parts:
       - python3-setuptools
       - libzbar0
       - libzbar-dev
-      - libatlas-base-dev
-
-
-
-  datalayerdeb:
-      plugin: dump
-      source: https://github.com/boschrexroth/ctrlx-automation-sdk/releases/download/1.18.0/ctrlx-datalayer-1.9.1.deb
-      source-type: deb
-      stage-packages:
-        - libzmq5
-     
- 
+      - libatlas-base-dev 
  
   shscripts:  
     source: ./shscripts/
