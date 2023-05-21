@@ -1,5 +1,4 @@
 {
-    "$schema": "https://json-schema.boschrexroth.com/ctrlx-automation/ctrlx-core/apps/package-manifest/package-manifest.v1.schema.json",
     "id": "python-ai-toolkit",
     "services": {
         "proxyMapping": [{
@@ -10,8 +9,8 @@
     },
     "menus": {
         "sidebar": [{
-            "id": "python-ai-toolkit.jupyter",
-            "title": "Jupyter-ai",
+            "id": "python-ifc-toolkit.jupyter",
+            "title": "Jupyter-ifc",
             "link": "/jupyter",
             "icon": "bosch-ic-document-edit",
             "target": "jupyter"
