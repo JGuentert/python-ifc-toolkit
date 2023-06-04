@@ -37,6 +37,11 @@ parts:
     build-environment:
       - PYTHONPATH: "$SNAPCRAFT_PART_INSTALL/usr/lib/python3/dist-packages"
 
+    override-build: |
+      snapcraftctl build
+      pip uninstall --yes pyzmq
+      pip install pyzmq
+
     stage-packages:
       - libzbar0
       - libzbar-dev
@@ -79,14 +84,6 @@ parts:
       - python3-pip
       - build-essential
       - python3-setuptools
-      - libzbar0
-      - libzbar-dev
-      - libatlas-base-dev 
-      - cmake
-      - gcc
-      - g++
-      - libzmq3-dev
-      - libsystemd-dev
  
   shscripts:  
     source: ./shscripts/
